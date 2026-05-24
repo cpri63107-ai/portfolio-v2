@@ -90,18 +90,11 @@
       margin-bottom: 28px;
       display: flex;
       align-items: center;
-      gap: 12px;
       opacity: 0;
       animation: fadeUp 0.7s ease forwards 0.1s;
     }
 
-    .hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 32px;
-      height: 1px;
-      background: var(--rust);
-    }
+    
 
     .hero-headline {
       font-family: var(--serif);
@@ -395,9 +388,10 @@
       border-top: 1px solid #2E2B26;
       padding: 60px;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 16px;
+      text-align: center;
     }
 
     .footer-name {
@@ -407,6 +401,32 @@
       font-style: italic;
       color: #F4EFE5;
     }
+
+    .footer-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-contact {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .footer-contact a {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      color: #9C9286;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      transition: color 0.2s;
+    }
+
+    .footer-contact a:hover { color: #C4754A; }
 
     .footer-note {
       font-family: var(--sans);
@@ -427,7 +447,7 @@
       .about { grid-template-columns: 1fr; gap: 20px; }
       .about-label { position: static; }
       .work-grid { grid-template-columns: 1fr; }
-      footer { flex-direction: column; text-align: center; padding: 40px 28px; }
+      footer { padding: 40px 28px; }
     }
 
     @media (max-width: 600px) {
@@ -447,10 +467,10 @@
 
 <!-- ── HERO ── -->
 <section class="hero">
-  <p class="hero-eyebrow">Marketing Communications &amp; Brand Writing</p>
+  <p class="hero-eyebrow">Brand Communications · Content Strategy · Marketing Science</p>
   <h1 class="hero-headline">Hi, I'm<br><em>Devipriya.</em></h1>
   <p class="hero-intro">
-    For nearly three years, I had the chance to bring some warmth, wit and humour into the B2B marketing communications space — working at a creative agency that primarily serviced software giants.
+    For nearly three years, I had the chance to bring some warmth, wit and humour into the B2B marketing communications space, working at a creative agency that primarily serviced software giants.
   </p>
 </section>
 
@@ -461,10 +481,10 @@
   </div>
   <div class="about-body">
     <p>
-      I added to brands — expanding, growing, and acting as custodian of the clients we served. The breadth of what I worked on ranged from <span class="highlight">public-byline thought leadership and ghostwritten executive blogs</span>, to <span class="highlight">sponsorship activations across Formula E and the Australian Open</span>, to <span class="highlight">interactive ebooks, branded films, and graphic novels.</span>
+      I added to brands, expanding, growing, and acting as custodian of the clients we served. The breadth of what I worked on ranged from <span class="highlight">public-byline thought leadership and ghostwritten executive blogs</span>, to <span class="highlight">sponsorship activations across Formula E and the Australian Open</span>, to <span class="highlight">interactive ebooks, branded films, and graphic novels.</span>
     </p>
     <p>
-      I'm now finishing an <span class="highlight">MSc in Marketing Science at Nanyang Technological University, Singapore</span> — sharpening the data half of the craft. I'm looking out for roles in marketing communications and brand communications. Roles that put both halves to work.
+      I'm now finishing an <span class="highlight">MSc in Marketing Science at Nanyang Technological University, Singapore</span>, sharpening the data half of the craft. I'm looking out for roles in marketing communications and brand communications. Roles that put both halves to work.
     </p>
   </div>
 </div>
@@ -473,141 +493,46 @@
 <section class="work">
   <div class="work-header">
     <h2 class="work-heading">The work I'm<br><em>most proud of</em></h2>
-    <span class="work-count">7 pieces</span>
+    <span class="work-count">6 pieces</span>
   </div>
 
   <div class="work-grid">
-
-    <!-- 1 — 2 Christmases -->
+    <!-- 1, 2 Christmases -->
     <div class="card">
       <div class="card-thumb">
         <img src="https://drive.google.com/thumbnail?id=1yi9teJbB8pHvcgq2AZKYXCPA9Heu68X4&sz=w800" alt="2 Christmases thumbnail" loading="lazy" />
       </div>
-      <div class="card-body">
-        <span class="card-client">Graphic Novel</span>
-        <h3 class="card-title">2 Christmases</h3>
-        <p class="card-desc">A graphic novel that explains the 6 pillars of energy transition through the story of a town called Easton. Because sometimes the best way to explain what technology can do for the world is to show it happening to people you care about.</p>
-        <div class="card-ctas">
-          <a class="cta-primary" href="https://drive.google.com/file/d/1hU7CHKEg4M8CegyN03IREBxc8jn6R0h-/view?usp=sharing" target="_blank" rel="noopener">
-            Read the piece
-            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
 
-    <!-- 2 — #TelcoForGood -->
+    <!-- 2, #TelcoForGood -->
     <div class="card">
       <div class="card-thumb">
         <img src="https://drive.google.com/thumbnail?id=1LM1AcaF8zP1H7fpXwGIotvuXhW6aqq00&sz=w800" alt="#TelcoForGood thumbnail" loading="lazy" />
       </div>
-      <div class="card-body">
-        <span class="card-client">Anthology · MWC 2023</span>
-        <h3 class="card-title">#TelcoForGood</h3>
-        <p class="card-desc">An anthology of stories honouring the telecom industry's partners at MWC 2023. A reminder that behind all the infrastructure and innovation, the whole point is keeping people connected to each other.</p>
-        <div class="card-ctas">
-          <a class="cta-primary" href="https://drive.google.com/file/d/1mtJzKhaDaJPCi9vsx8YTj5e05g5oJ_QL/view?usp=sharing" target="_blank" rel="noopener">
-            Read the piece
-            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
 
-    <!-- 3 — Infosys Confluence -->
+    <!-- 3, Infosys Confluence -->
     <div class="card">
       <div class="card-thumb">
         <img src="https://drive.google.com/thumbnail?id=1CjVVCytg9qx1-aeUndeRizvRYuCpKRwx&sz=w800" alt="Infosys Confluence thumbnail" loading="lazy" />
       </div>
-      <div class="card-body">
-        <span class="card-client">Thought Leadership · Infosys Confluence</span>
-        <h3 class="card-title">Executive Thought Leadership</h3>
-        <p class="card-desc">Tens of minutes of unscripted executive conversation, distilled into tight on-brand thought leadership. With just enough of each speaker's voice left in to make it feel like theirs.</p>
-        <div class="card-ctas">
-          <p class="cta-links-label">Read the articles</p>
-          <div class="cta-links">
-            <a class="cta-pill" href="https://www.infosys.com/confluence/2022/emea/insights/doing-more-less-carbon.html" target="_blank" rel="noopener">Article 1 ↗</a>
-            <a class="cta-pill" href="https://www.infosys.com/confluence/2023/us/insights/masterclass-leading.html" target="_blank" rel="noopener">Article 2 ↗</a>
-            <a class="cta-pill" href="https://www.infosys.com/confluence/2023/apac/insights/growing-through-tough-times.html" target="_blank" rel="noopener">Article 3 ↗</a>
-            <a class="cta-pill" href="https://www.infosys.com/confluence/2025/apac/insights/dreaming-big.html" target="_blank" rel="noopener">Article 4 ↗</a>
-            <a class="cta-pill" href="https://www.infosys.com/confluence/2024/apac/insights/beyond-spotlight.html" target="_blank" rel="noopener">Article 5 ↗</a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- 4 — Infosys Aster -->
+    <!-- 5, Infosys Equinox -->
+    <div class="card">
+      <div class="card-thumb">
+        <img src="https://drive.google.com/thumbnail?id=1YINZRWzuvRyvc4OTmW8ETHT8-Bh9S534&sz=w800" alt="Infosys Equinox thumbnail" loading="lazy" />
+      </div>
+
+    <!-- 4, Infosys Aster -->
     <div class="card">
       <div class="card-thumb collage">
         <img src="https://drive.google.com/thumbnail?id=1jyeR6VpLKE88cP6AEt-F5t52xVAxrqDR&sz=w800" alt="Infosys Aster case study 1" loading="lazy" />
         <img src="https://drive.google.com/thumbnail?id=1MbZAGubTGw-P3pbzoi1PL-x6cTzSzzCI&sz=w800" alt="Infosys Aster case study 2" loading="lazy" />
       </div>
-      <div class="card-body">
-        <span class="card-client">Video Case Studies · Infosys Aster</span>
-        <h3 class="card-title">Infosys Aster</h3>
-        <p class="card-desc">Complex enterprise marketing solutions, made impossible to scroll past — scripted as ~45 second video case studies for clients including a multinational beverage retailer.</p>
-        <div class="card-ctas">
-          <p class="cta-links-label">Watch the case studies</p>
-          <div class="cta-links">
-            <a class="cta-pill" href="https://www.linkedin.com/posts/infosys-aster_infosysaster-seamlessintegration-clientsuccess-activity-7399076901778178048-IMSK?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaQin8B6bEqwkMt3adNlaF3Xw8DjLWGaqU" target="_blank" rel="noopener">Case Study 1 ↗</a>
-            <a class="cta-pill" href="https://www.linkedin.com/posts/infosys-aster_infosysaster-retailrevolution-successstory-activity-7391466757795917824-pGFE?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaQin8B6bEqwkMt3adNlaF3Xw8DjLWGaqU" target="_blank" rel="noopener">Case Study 2 ↗</a>
-            <a class="cta-pill" href="https://drive.google.com/file/d/1-M47hI81F4RpiJ32Z8uk08mzGOM039XBU/view?usp=sharing" target="_blank" rel="noopener">Case Study 3 ↗</a>
-            <a class="cta-pill" href="https://drive.google.com/file/d/1xa-CNPyH-uRIGfkMMajVOaPjvJ12uSJ5/view?usp=sharing" target="_blank" rel="noopener">Case Study 4 ↗</a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- 5 — Infosys Equinox -->
-    <div class="card">
-      <div class="card-thumb">
-        <img src="https://drive.google.com/thumbnail?id=1YINZRWzuvRyvc4OTmW8ETHT8-Bh9S534&sz=w800" alt="Infosys Equinox thumbnail" loading="lazy" />
-      </div>
-      <div class="card-body">
-        <span class="card-client">Video Case Studies · Infosys Equinox</span>
-        <h3 class="card-title">Infosys Equinox</h3>
-        <p class="card-desc">From a 150,000-student EdTech platform to a global footwear retailer scaling across three continents — scripted as ~90 second video case studies built to travel across channels without losing what made each story worth telling.</p>
-        <div class="card-ctas">
-          <p class="cta-links-label">Watch the case studies</p>
-          <div class="cta-links">
-            <a class="cta-pill" href="https://www.linkedin.com/posts/infosysequinox_helping-a-global-footwear-giant-run-digital-activity-7450188762808082432-Kv8G?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaQin8B6bEqwkMt3adNlaF3Xw8DjLWGaqU" target="_blank" rel="noopener">Case Study 1 ↗</a>
-            <a class="cta-pill" href="https://www.linkedin.com/posts/infosysequinox_building-an-integrated-education-platform-activity-7331310532957822981-LGT5?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaQin8B6bEqwkMt3adNlaF3Xw8DjLWGaqU" target="_blank" rel="noopener">Case Study 2 ↗</a>
-            <a class="cta-pill" href="https://www.linkedin.com/posts/infosysequinox_ecommerce-machx-humancentriccommerce-activity-7391829294597144576-enX6?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaQin8B6bEqwkMt3adNlaF3Xw8DjLWGaqU" target="_blank" rel="noopener">Case Study 3 ↗</a>
-            <a class="cta-pill" href="https://www.linkedin.com/posts/infosysequinox_unifiedcommerce-microservices-humancentriccommerce-activity-7447999337315426304-V5HX?utm_source=share&utm_medium=member_desktop&rcm=ACoAADaQin8B6bEqwkMt3adNlaF3Xw8DjLWGaqU" target="_blank" rel="noopener">Case Study 4 ↗</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 6 — Infosys x Formula E -->
-    <div class="card">
-      <div class="card-thumb">
-        <img src="https://drive.google.com/thumbnail?id=16u1H48F4OSworldadArnil4RqcDwTtGe&sz=w800" alt="Infosys Formula E thumbnail" loading="lazy" />
-      </div>
-      <div class="card-body">
-        <span class="card-client">Omnichannel Campaign · Infosys × Formula E</span>
-        <h3 class="card-title">Infosys × Formula E</h3>
-        <p class="card-desc">Pre-race, post-race, leadership posts, mailers. A full-season omnichannel activation reminding people that the most exciting innovations don't just happen on the track.</p>
-        <div class="card-ctas">
-          <span class="cta-note">Full campaign materials available on request</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 7 — QE Ebook -->
+    <!-- 7, QE Ebook -->
     <div class="card">
       <div class="card-thumb">
         <img src="https://drive.google.com/thumbnail?id=1RB7ZtyYwO_OX43nTtwPeC0sD0DFIkb7F&sz=w800" alt="Infosys QE Ebook thumbnail" loading="lazy" />
       </div>
-      <div class="card-body">
-        <span class="card-client">Interactive Ebook · Infosys Quality Engineering</span>
-        <h3 class="card-title">Quality Engineering Ebook</h3>
-        <p class="card-desc">Six client success stories across financial services, healthcare, and manufacturing — each one turning a highly technical engagement into something a decision-maker actually wants to read.</p>
-        <div class="card-ctas">
-          <span class="cta-note">Available on request</span>
-        </div>
-      </div>
-    </div>
 
   </div><!-- /grid -->
 </section>
@@ -615,7 +540,19 @@
 <!-- ── FOOTER ── -->
 <footer>
   <span class="footer-name">Devipriya Chakraborty</span>
-  <span class="footer-note">MSc Marketing Science · NTU Singapore</span>
+  <div class="footer-right">
+    <span class="footer-note">MSc Marketing Science · NTU Singapore</span>
+    <div class="footer-contact">
+      <a href="mailto:chakraborty.devipriya00@gmail.com">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+        chakraborty.devipriya00@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/devipriya-chakraborty" target="_blank" rel="noopener">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+    </div>
+  </div>
 </footer>
 
 <script>
